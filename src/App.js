@@ -4,7 +4,20 @@ import Contact from './components/Contact.js'
 function App() {
   return (
     <div className="App">
-      <Contact />
+      <Contact 
+      name="Cecil Pena"
+      image="https://randomuser.me/api/portraits/men/1.jpg"
+      online
+      />
+      <Contact 
+      name="Tomothy Parker"
+      image="https://randomuser.me/api/portraits/men/66.jpg"
+      />
+      <Contact 
+      name="Willie Lawrence"
+      image="https://randomuser.me/api/portraits/women/54.jpg"
+      online
+      />
     </div>
   );
 }

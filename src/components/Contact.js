@@ -1,22 +1,34 @@
 import React from 'react';
 import './Contact.css'
 
-const name= "Dark Pacman";
-const image = 'https://randomuser.me/api/portraits/men/18.jpg';
-const online = true;
+function online(online) {
+    if (online) {
+      return (
+        <div className="status">
+          <div className="status-online"></div>
+          <div className="status-text">Online</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="status">
+          <div className="status-offline"></div>
+          <p className="status-text">Offline</p>
+        </div>
+      );
+    }
+  }
 
-function Contact() {
+function Contact(props) {
     return (
           <div className="Contact">
-            <img className="avatar" src={image}></img>
+            <img className="avatar" src={props.image}  />
             <div>
-              <h4 className="name">{name}</h4>
+              <h4 className="name">{props.name}</h4>
               <div className="status">
-                <div className="status-online"></div>
-                <p className="status-text">{
-                    online ? 'Online' : 'Offline'
-                    }</p>
-              </div>
+                <div className="name">{props.name}</div>
+                    {online(props.online)}
+                </div>
             </div>
           </div>
         );
