@@ -26,10 +26,9 @@ function Contact(props) {
             <div>
               <h4 className="name">{props.name}</h4>
               <div className="status">
-                <div className="name">{props.name}</div>
                     {online(props.online)}
-                </div>
             </div>
+          </div>
           </div>
         );
 };
