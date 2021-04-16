@@ -2,6 +2,16 @@ import React from "react";
 import Contact from './Contact';
 
 // An array of objects
+
+class Online extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      online: false,
+    };
+  }
+}  
+
 const users = [
     {
       name: 'Robert Reyes',
@@ -30,7 +40,7 @@ const users = [
     }
   ];
 
-const QuoteList = () => (
+const ContactList = () => (
   <div>
     {users.map(item => (
   <Contact name={item.name} image={item.avatar} online={item.online} />
@@ -38,4 +48,4 @@ const QuoteList = () => (
   </div>
 );
 
-export default QuoteList;
+export default ContactList;
