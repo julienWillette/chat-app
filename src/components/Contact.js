@@ -1,22 +1,6 @@
 import React from 'react';
 import './Contact.css'
 
-function online(online) {
-    if (online) {
-      return (
-        <div className="status">
-          <div className="status-text">Online</div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="status">
-          <p className="status-text">Offline</p>
-        </div>
-      );
-    }
-  }
-
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -37,9 +21,9 @@ class Contact extends React.Component {
                       this.setState({ online: newOnline });
               }}
               >
-                <div className="status-text">
-                  {online(this.props.online)}
-                </div>
+              <p className="status-text">
+                {this.state.online ? "Online" : "Offline"}
+              </p>
               </button>
             </div>
           </div>
