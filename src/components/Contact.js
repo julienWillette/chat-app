@@ -38,7 +38,7 @@ class Contact extends React.Component {
               }}
               >
                 <div className="status-text">
-                {online(this.props.online)}
+                  {online(this.props.online)}
                 </div>
               </button>
             </div>
